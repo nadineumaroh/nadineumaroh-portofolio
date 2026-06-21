@@ -534,9 +534,29 @@ footer{
   nav{padding:0 var(--px)}
   .nav-links{display:none}
   .nav-right{display:none}
-  #home{grid-template-columns:1fr}
-  .hero-img-placeholder{display:none}
-  .hero-left{padding:32px var(--px) 36px}
+  #home{
+    display:flex;
+    flex-direction:column;
+  }
+  .hero-right{
+    order:-1;
+    width:100%;
+  }
+  .hero-img-placeholder{
+    position:relative;
+    top:auto;
+    width:100%;
+    height:auto;
+    min-height:min(68vw,360px);
+    max-height:400px;
+  }
+  .hero-img-overlay{
+    background:linear-gradient(to bottom,transparent 45%,var(--bg) 100%);
+  }
+  .hero-photo-tag{
+    bottom:16px;left:var(--px);
+  }
+  .hero-left{padding:24px var(--px) 36px}
   .hs-grid{grid-template-columns:1fr}
   .org-grid,.cert-grid{grid-template-columns:1fr}
   footer{flex-direction:column;gap:10px;text-align:center}
@@ -672,7 +692,7 @@ footer{
 
   <div class="hero-right">
     <div class="hero-img-placeholder">
-      <img src="./assets/foto-nadine.jpeg" alt="Nadine Kholifah Umaroh">
+      <img src="assets/foto-nadine.jpeg" alt="Nadine Kholifah Umaroh">
       <div class="hero-img-overlay"></div>
       <div class="hero-photo-tag">
         <span>nadineumaroh@gmail.com</span>
