@@ -112,6 +112,13 @@ nav{
   border-left:2px solid var(--violet);padding-left:12px;
   margin-bottom:22px;line-height:1.65;
 }
+.hero-head{display:block;margin-bottom:0}
+.hero-head-text{display:block}
+.hero-photo-compact{display:none}
+.hero-photo-compact img{
+  width:100%;height:100%;object-fit:cover;object-position:top center;
+  display:block;
+}
 .hero-btns{display:flex;gap:0;margin-bottom:28px}
 .hbtn{
   font-family:var(--fb);font-weight:500;font-size:11px;
@@ -534,29 +541,24 @@ footer{
   nav{padding:0 var(--px)}
   .nav-links{display:none}
   .nav-right{display:none}
-  #home{
-    display:flex;
-    flex-direction:column;
-  }
-  .hero-right{
-    order:-1;
-    width:100%;
-  }
-  .hero-img-placeholder{
-    position:relative;
-    top:auto;
-    width:100%;
-    height:auto;
-    min-height:min(68vw,360px);
-    max-height:400px;
-  }
-  .hero-img-overlay{
-    background:linear-gradient(to bottom,transparent 45%,var(--bg) 100%);
-  }
-  .hero-photo-tag{
-    bottom:16px;left:var(--px);
-  }
+  #home{grid-template-columns:1fr}
+  .hero-right{display:none}
   .hero-left{padding:24px var(--px) 36px}
+  .hero-head{
+    display:flex;align-items:flex-start;justify-content:space-between;
+    gap:14px;margin-bottom:18px;
+  }
+  .hero-head-text{flex:1;min-width:0}
+  .hero-photo-compact{
+    display:block;flex-shrink:0;
+    width:92px;height:116px;
+    border-radius:6px;overflow:hidden;
+    border:1px solid var(--border2);
+    background:var(--bg2);
+    box-shadow:0 6px 18px -10px rgba(0,0,0,.55);
+  }
+  .hero-name{margin-bottom:8px}
+  .hero-sub{margin-bottom:0}
   .hs-grid{grid-template-columns:1fr}
   .org-grid,.cert-grid{grid-template-columns:1fr}
   footer{flex-direction:column;gap:10px;text-align:center}
@@ -597,14 +599,21 @@ footer{
     <div class="hero-available rv">
       <span class="hero-dot"></span>Available for Internships — Jakarta
     </div>
-    <div class="hero-name rv">
-      <span class="line1">Nadine</span>
-      <span class="line2">Kholifa<em>h</em></span>
-    </div>
-    <div class="hero-sub rv">
-      Information Systems Student<br/>
-      Data Analytics &amp; AI Enthusiast<br/>
-      President University · Semester 6
+    <div class="hero-head rv">
+      <div class="hero-head-text">
+        <div class="hero-name">
+          <span class="line1">Nadine</span>
+          <span class="line2">Kholifa<em>h</em></span>
+        </div>
+        <div class="hero-sub">
+          Information Systems Student<br/>
+          Data Analytics &amp; AI Enthusiast<br/>
+          President University · Semester 6
+        </div>
+      </div>
+      <div class="hero-photo-compact">
+        <img src="assets/foto-nadine.jpeg" alt="Nadine Kholifah Umaroh">
+      </div>
     </div>
     <div class="hero-btns rv">
       <a href="#projects" class="hbtn">Portfolio →</a>
