@@ -535,8 +535,8 @@ footer{
 .rv{opacity:0;transform:translateY(12px);transition:opacity .5s ease,transform .5s ease}
 .rv.in{opacity:1;transform:none}
 
-/* MOBILE */
-@media(max-width:900px){
+/* HP & layar sempit — ≤640px (lebar HP biasanya 360–430px) */
+@media(max-width:640px){
   :root{--px:24px;--section-y:36px}
   nav{padding:0 var(--px)}
   .nav-links{display:none}
@@ -569,6 +569,15 @@ footer{
   .pdf-body{padding:18px 20px}
   .contact-btns{flex-direction:column;width:100%}
   .cbtn{justify-content:center}
+}
+
+/* HP kecil — layar ≤480px */
+@media(max-width:480px){
+  .hero-photo-compact{
+    width:76px;height:96px;
+  }
+  .hero-head{gap:10px}
+  .hero-name .line2{font-size:clamp(26px,8vw,34px)}
 }
 </style>
 </head>
